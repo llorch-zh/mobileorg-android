@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        mavenCentral()
+    	maven{url 'http://repo1.maven.org/maven2'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.2'
@@ -9,7 +9,7 @@ buildscript {
 apply plugin: 'com.android.application'
 
 repositories {
-    mavenCentral()
+   	maven{url 'http://repo1.maven.org/maven2'}
 }
 
 dependencies {
