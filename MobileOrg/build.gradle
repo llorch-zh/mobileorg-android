@@ -3,10 +3,10 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:2.1.2'
     }
 }
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 repositories {
     mavenCentral()
@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
-    compile 'com.android.support:support-v4:13.0.+'
+    compile 'com.android.support:support-v4:24.0.0'
     compile 'com.jcraft:jsch:0.1.50'
     compile project(':libraries:locale')
     compile fileTree(dir: 'libs', include: '*.jar')
@@ -32,7 +32,7 @@ def getVersionName = { ->
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.1"
+    buildToolsVersion "19.1.0"
 
     defaultConfig {
         minSdkVersion 9
@@ -55,7 +55,7 @@ android {
             signingConfig signingConfigs.matburt
         }
         donate {
-            packageNameSuffix ".donate"
+            applicationIdSuffix ".donate"
             signingConfig signingConfigs.matburt
         }
         debug {
